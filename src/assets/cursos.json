@@ -1,0 +1,27 @@
+[
+    {
+        "nombre": "Introducción a la Programación",
+        "descripcion": "Este curso introductorio te enseñará los conceptos básicos de la programación.",
+        "precio": "500"
+    },
+    {
+        "nombre": "Diseño de Interfaces de Usuario",
+        "descripcion": "Aprende a diseñar interfaces de usuario efectivas y atractivas para aplicaciones.",
+        "precio": "600"
+    },
+    {
+        "nombre": "Desarrollo Web Avanzado",
+        "descripcion": "Este curso te permitirá profundizar en el desarrollo web, abordando tecnologías avanzadas.",
+        "precio": "700"
+    },
+    {
+        "nombre": "Bases de Datos y SQL",
+        "descripcion": "Aprende a diseñar y gestionar bases de datos relacionales utilizando SQL.",
+        "precio": "800"
+    },
+    {
+        "nombre": "Inteligencia Artificial",
+        "descripcion": "Explora las aplicaciones de la inteligencia artificial en la informática moderna.",
+        "precio": "500"
+    }
+]
