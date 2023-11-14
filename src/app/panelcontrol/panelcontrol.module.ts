@@ -6,6 +6,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
+import { CursosModule } from './paginas/cursos/cursos.module';
 
 
 
@@ -14,12 +15,13 @@ import { RouterModule } from '@angular/router';
     PanelcontrolComponent
   ],
   imports: [
-    CommonModule,MatToolbarModule,MatIconModule,MatButtonModule,MatSidenavModule,RouterModule
+    CommonModule,MatToolbarModule,MatIconModule,MatButtonModule,MatSidenavModule,RouterModule,CursosModule
   ],
   exports: [
     PanelcontrolComponent
   ],
 })
 export class PanelcontrolModule { 
+  
   
 }

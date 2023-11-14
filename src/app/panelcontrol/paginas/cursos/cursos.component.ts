@@ -1,6 +1,9 @@
-import { Component, OnInit  } from '@angular/core';
-import { Cursos } from '../../../cursos';
-import { JsonLoaderService } from './json-loader.service';
+import { Component  } from '@angular/core';
+import { CursoService } from './cursos.service';
+import  {curso} from './models/cursos'
+import  {Observable, of} from 'rxjs'
+import  {MatDialog} from '@angular/material/dialog'
+import { CursosDialogComponent } from './components/cursos-dialog/cursos-dialog.component';
 
 
 @Component({
@@ -8,26 +11,16 @@ import { JsonLoaderService } from './json-loader.service';
   templateUrl: './cursos.component.html',
   styleUrls: ['./cursos.component.scss'],
 })
-export class CursosComponent implements OnInit {
-  cursos: any= [];
-  cursos2: Cursos[]= 
-  [];
-
-  cursosCargados = false;
-  constructor(private jsonLoaderService: JsonLoaderService) { }
-
-  ngOnInit() {
-    this.jsonLoaderService.loadJsonData().subscribe((data) => {
-      this.cursos=data
-      this.cursosCargados = true;
-    });
-  }
-  cargaVector(){
-    this.cursos.forEach((elemento:Cursos) => {
-      this.cursos2.push(elemento);
-    });
-    console.log(this.cursos2)
-
-  }
-
+export class CursosComponent{
+  cursos$: Observable<curso[]>
+  constructor( private cursoServicio: CursoService,
+              // private matDialog:MatDialog  
+              ){
+  this.cursos$=this.cursoServicio.getCursos()
+}
+//
+//addcurso(){
+//  this.matDialog.open(CursosDialogComponent)
+//}
+  
 }
